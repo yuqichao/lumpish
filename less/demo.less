@@ -1,0 +1,62 @@
+
+/*  demo  */
+.demo-back{
+  position: fixed;
+  display: block;
+  width: .7rem;
+  height: .7rem;
+  left: -.35rem;
+  top: -.35rem;
+  background: #215590;
+  transform: rotate(-45deg);
+  z-index: 10;
+}
+.demo-back span{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: .7rem;
+  font: .1rem/.14rem 'microsoft yahei';
+  text-align: center;
+  color: #fff;
+}
+.demo-prev,
+.demo-next{
+  position: fixed;
+  width: .1rem;
+  height: .5rem;
+  background: #215590;
+  color: #fff;
+  font: .14rem/.3rem 'microsoft yahei';
+  z-index: 9;
+  transition: width .3s ease-in;
+  overflow: hidden;
+}
+.demo-prev{
+  top: 50%;
+  left: 0;
+  text-align: right;
+}
+.demo-next{
+  top: 50%;
+  right: 0;
+  text-align: left;
+}
+.demo-prev span,
+.demo-next span{
+  display: block;
+  width: .3rem;
+  height: .25rem;
+  padding: .05rem;
+  color: #fff;
+}
+.demo-next span{
+  position: absolute;
+  right: 0;
+}
+.demo-prev:hover,
+.demo-next:hover{
+  width: .3rem;
+  text-decoration: none;
+  color: #fff;
+}

@@ -1,0 +1,391 @@
+<style>
+    h5{
+        font-weight: bold;
+    }
+    .row{
+        margin: 30px 0;
+    }
+
+    .link{
+        text-decoration: underline;
+    }
+
+    .demo{
+        border: dashed 1px #ccc;
+        height: 300px;
+        overflow: hidden;
+    }
+    /* 滚动条样式 横向 */
+
+    .ys-scroll-bar.ys-direction-h:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .ys-scroll-bar.ys-direction-h .ys-btn-left{
+        float: left;
+        width: 10px;
+        height: 10px;
+        margin: 0 2px;
+        border-radius: 50%;
+        background: #53eac7;
+    }
+    .ys-scroll-bar.ys-direction-h .ys-btn-right{
+        float: right;
+        width: 10px;
+        height: 10px;
+        margin: 0 2px;
+        border-radius: 50%;
+        background: #53eac7;
+    }
+    .ys-scroll-bar.ys-direction-h .ys-range-box{
+        float: left;
+        height: 10px;
+        border-radius: 5px;
+        background: #e3e3e3;
+    }
+    .ys-scroll-bar.ys-direction-h .ys-range-box .ys-range-btn{
+        position: relative;
+        float: left;
+        width: 30%;
+        height: 10px;
+        border-radius: 5px;
+        background: #53eac7;
+    }
+    .ys-scroll-bar.ys-direction-h .ys-btn-left:hover,
+    .ys-scroll-bar.ys-direction-h .ys-btn-right:hover,
+    .ys-scroll-bar.ys-direction-h .ys-range-box .ys-range-btn:hover{
+        background: #3bd0ad;
+    }
+    .ys-scroll-bar.ys-direction-h .ys-range-box .ys-moving.ys-ctrl-btn{
+        cursor: pointer;
+    }
+
+    /* 滚动条样式 竖向 */
+
+    .ys-scroll-bar.ys-direction-v:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .ys-scroll-bar.ys-direction-v{
+        float: left;
+    }
+    .ys-scroll-bar.ys-direction-v .ys-btn-top{
+        width: 10px;
+        height: 10px;
+        margin: 2px 0;
+        border-radius: 50%;
+        background: #53eac7;
+    }
+    .ys-scroll-bar.ys-direction-v .ys-btn-btm{
+        width: 10px;
+        height: 10px;
+        margin: 2px 0;
+        border-radius: 50%;
+        background: #53eac7;
+    }
+    .ys-scroll-bar.ys-direction-v .ys-range-box{
+        width: 10px;
+        border-radius: 5px;
+        background: #e3e3e3;
+    }
+    .ys-scroll-bar.ys-direction-v .ys-range-box .ys-range-btn{
+        position: relative;
+        width: 10px;
+        border-radius: 5px;
+        background: #53eac7;
+    }
+    .ys-scroll-bar.ys-direction-v .ys-btn-top:hover,
+    .ys-scroll-bar.ys-direction-v .ys-btn-btm:hover,
+    .ys-scroll-bar.ys-direction-v .ys-range-box .ys-range-btn:hover{
+        background: #3bd0ad;
+    }
+    .ys-scroll-bar.ys-direction-v .ys-range-box .ys-moving.ys-ctrl-btn{
+        cursor: pointer;
+    }
+</style>
+<div class="container">
+    <div class="row"><div class="col-xs-12"><a class="link" href="demo/mscroll/jQuery.mScroll.js" target="_blank">jQuery.mScroll.js 下载</a></div></div>
+    <!-- DEMO 1-->
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="demo example1">
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <h5>1.无需传递任何参数即可实现自定义的滚动条</h5>
+            <pre>$('.demo-1').mScroll()</pre>
+        </div>
+        <script>
+            $('.example1').mScroll();
+        </script>
+    </div>
+    <!-- DEMO 2-->
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="demo example2">
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <h5>2.简单的传入direction和contentWidth即可将垂直滚动条变成水平滚动条</h5>
+            <pre><span>$('.demo-2').mScroll({direction: true, contentWidth: 1200});</span>
+<span>direction: 为true时表示水平滚动，false(默认)时表示垂直滚动</span>
+<span>contentWidth: 只有当direction为true时才有意义，表示滚动内容的宽度</span></pre>
+        </div>
+        <script>
+            $('.example2').mScroll({direction: true, contentWidth: 1200});
+        </script>
+    </div>
+    <!-- DEMO 3-->
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="demo example3">
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="demo example4">
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <h5>3.当传入hide参数且值为true的时候，滚动条不占用内容宽度，并只有鼠标在内容范围内时才显示</h5>
+            <pre><span>$('.example3').mScroll({hide: true});</span>
+<span>$('.example4').mScroll({direction: true, contentWidth: 1200,<br> hide: true});</span>
+<span>hide: 为true时滚动条不占用内容宽度，false(默认值)</span></pre>
+        </div>
+        <script>
+            $('.example3').mScroll({hide: true});
+            $('.example4').mScroll({direction: true, contentWidth: 1200, hide: true});
+        </script>
+    </div>
+    <!-- DEMO 4-->
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="demo example5">
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <h5>4.当传入keyControl参数且值为true的时候，可以开启按键控制</h5>
+            <pre><span>$('.example5').mScroll({keyControl: true});</span>
+<span>keyControl: 为true时可以通过Home（顶部）,End（底部）,PageUp（上一页）,<br>PageDown（下一页）及方向键上下（垂直模式）左右（水平模式）控制内容和滚动条，false(默认值)</span>
+<span>注：同一个页面上只能有一个元素开启按键控制</span></pre>
+        </div>
+        <script>
+            $('.example5').mScroll({keyControl: true});
+        </script>
+    </div>
+    <!-- DEMO 5-->
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="demo example6">
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="demo example7">
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <h5>5.回调函数</h5>
+            <pre><span>startCallback: 当滚动到顶部的时候会触发，每次抵达顶部只触发一次</span>
+<span>moveCallback: 每当进行滚动的时候触发</span>
+<span>endCallback: 当滚动到底部的时候会触发，每次抵达底部只触发一次</span>
+<span>返回的对象一共有三个属性： position，返回的是卷去内容的长度;<br> page,总分页数; index，当前页</span>
+<span>注： 按F12可以查看效果</span></pre>
+        </div>
+        <script>
+            $('.example6').mScroll({
+                startCallback: function(i){
+                    console.log('已到达初始位置： ' + i.position);
+                },
+                moveCallback: function(i){
+                    console.log('正在滚动中： ' + i.position);
+                },
+                endCallback: function(i){
+                    console.log('已到达结束位置： ' + i.position);
+            }});
+            $('.example7').mScroll({
+                direction: true,
+                contentWidth: 1200,
+                startCallback: function(i){
+                    console.log('已到达初始位置： ' + i.position);
+                },
+                moveCallback: function(i){
+                    console.log('正在滚动中： ' + i.position);
+                },
+                endCallback: function(i){
+                    console.log('已到达结束位置： ' + i.position);
+            }});
+        </script>
+    </div>
+    <!-- DEMO 6-->
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="demo example8">
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="demo example9">
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <h5>6.添加resize监控</h5>
+            <pre>
+<span>如果有动态加载内容或者自适应的需求可以传入参数resizeable并赋值为true,<br>即可在改变元素宽高的同时更新相关滚动参数</span>
+<span>也可以链式调用mUpdate方法,mUpdate方法接收一个数值参数，<br>可以用来设定内容的具体宽度，这个参数只在水平模式下生效</span>
+<span>注： 按F12可以查看效果</span></pre>
+        </div>
+        <script>
+            $('.example8').mScroll({resizeable: true});
+            var d = $('.example9').mScroll({
+                resizeable: true,
+                direction: true,
+                contentWidth: 1200
+            });
+            setTimeout(function(){
+                d.mUpdate(700);
+                $('.example8 .ys-scroll-content').append(
+                        '这里是后期添加的内容，用来展示动态更新滚动参数<br>' +
+                        '这里是后期添加的内容，用来展示动态更新滚动参数<br>' +
+                        '这里是后期添加的内容，用来展示动态更新滚动参数<br>' +
+                        '这里是后期添加的内容，用来展示动态更新滚动参数<br>' +
+                        '这里是后期添加的内容，用来展示动态更新滚动参数<br>' +
+                        '这里是后期添加的内容，用来展示动态更新滚动参数<br>');
+                },1000);
+        </script>
+    </div>
+    <!-- DEMO 7-->
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="demo example10">
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+                这个DEMO是用来展示mScroll插件的使用场景的，最常见的是只更改滚动条样式，实现更美观的页面展示<br>
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <h5>7.相关方法</h5>
+            <div style="margin: 10px 0;">
+                <button type="button" class="btn btn-primary btn-xs exp10-prev">上一页</button>
+                <button type="button" class="btn btn-primary btn-xs exp10-next">下一页</button>
+                <button type="button" class="btn btn-primary btn-xs exp10-jump">第三页</button>
+                <button type="button" class="btn btn-primary btn-xs exp10-date">相关信息</button>
+            </div>
+            <pre>
+<span>mScroll除去上面已经介绍过的mUpdate方法以外，另有四个方法</span>
+<span>mPrevPage,可以自动跳转到上一页</span>
+<span>mNextPage,可以自动跳转到下一页</span>
+<span>mGo,可以跳转到指定的页数（从1开始），如果传入的页数参数小于1则跳转到第一页，<br>大于最大页数就跳转到最后一页</span>
+<span>mDate，可以获取当前对象的相关信息，length: 最大页数， index: 当前页索引，<br>position: 内容所在位置，max: 内容可移动范围。注： 按F12可以查看效果</span></pre>
+        </div>
+        <script>
+            var e = $('.example10').mScroll();
+            $('.exp10-prev').click(function(){
+                e.mPrevPage();
+            });
+            $('.exp10-next').click(function(){
+                e.mNextPage();
+            });
+            $('.exp10-jump').click(function(){
+                e.mGo(3);
+            });
+            $('.exp10-date').click(function(){
+                console.log(e.mDate());
+            });
+        </script>
+    </div>
+</div>

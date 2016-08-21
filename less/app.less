@@ -1,0 +1,39 @@
+
+@import 'vendors/animate/animate.min.less';
+
+/* RESET */
+
+html{
+  font-size: 100px;
+}
+
+ul,ol,li,dl,dt{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p{
+  margin: 0;
+}
+a:link,
+a:hover,
+a:active,
+a:focus,
+button{
+  text-decoration: none;
+  outline: none;
+}
+.clearfix {
+  zoom: 1;
+  &:after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+}
+
+@import 'demo.less';
+@import 'home.less';
+@import 'article.less';
+@import 'detail.less';

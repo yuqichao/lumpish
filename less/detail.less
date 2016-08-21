@@ -1,0 +1,429 @@
+/* 变量 */
+
+@detail-space: .1rem;
+@detail-bg: #fff;
+
+@detail-user-position: -.2rem;
+@detail-user-position-resize: .1rem;
+@detail-user-width: .5rem;
+@detail-user-width-hover: 1.8rem;
+@detail-user-height: .5rem;
+@detail-user-space: .05rem;
+@detail-user-bg: rgba(0,0,0,.6);
+@detail-user-text-color: #fff;
+
+@detail-user-img-bg: #f7f7f7;
+
+
+@detail-title-edge: .2rem;
+@detail-title-text: bold .18rem/.3rem 'microsoft yahei';
+@detail-title-color: #4e5e6a;
+
+@detail-desc-edge: .2rem;
+@detail-desc-space: .3rem .6rem;
+@detail-desc-bg: #f7f7f7;
+@detail-desc-text: .14rem/.24rem 'microsoft yahei';
+@detail-desc-color: #909090;
+
+@detail-nav-edge: .2rem 0;
+@detail-nav-width: 1.2rem;
+@detail-nav-height: .3rem;
+@detail-nav-text: .14rem/.2rem '宋体';
+@detail-nav-color: #fff;
+@detail-nav-position: -.2rem;
+@detail-nav-space: .05rem .15rem;
+@detail-nav-space-hover: .05rem;
+@detail-nav-bg: rgba(0,0,0,.6);
+@detail-nav-bg-hover: rgba(0,0,0,.8);
+
+@detail-form-edge: .2rem;
+@detail-form-space: .1rem;
+@detail-form-bg: #fff;
+
+@detail-form-title-edge: .2rem;
+@detail-form-title-space: .1rem 0;
+@detail-form-title-line: solid .04rem #F1F4F9;
+@detail-form-title-text: bold .16rem/.3rem 'microsoft yahei';
+@detail-form-title-color: #4e5e6a;
+@detail-form-item-edge: .15rem;
+
+@detail-form-success-color: #5ea827;
+@detail-form-error-color: #ef5f5f;
+@detail-form-success-bg: #edf3ec;
+@detail-form-error-bg: #fdf5f5;
+
+@detail-form-notice-space:  .06rem .12rem;
+@detail-form-notice-text: .14rem/.22rem 'microsoft yahei';
+
+@detail-form-input-text: .14rem/.22rem 'microsoft yahei';
+@detail-form-input-border: #d1dae4;
+
+@detail-form-btn-width: 1rem;
+@detail-form-btn-height: .3rem;
+@detail-form-btn-space: .05rem .25rem;
+@detail-form-btn-bg: #458ad8;
+@detail-form-btn-color: #fff;
+@detail-form-btn-bg-hover: #3578c4;
+
+
+@detail-comment-edge: .2rem;
+@detail-comment-space: .1rem;
+@detail-comment-bg: #fff;
+
+@detail-comment-item-edge: .1rem 0;
+@detail-comment-item-space: .1rem;
+@detail-comment-item-line: solid 2px #F1F4F9;
+
+@detail-comment-user-position: -.2rem;
+@detail-comment-user-width: .5rem;
+@detail-comment-user-width-hover: 1.8rem;
+@detail-comment-user-height: .5rem;
+@detail-comment-user-space: .05rem;
+@detail-comment-user-bg: rgba(0,0,0,.8);
+@detail-comment-user-text-color: #fff;
+@detail-comment-user-text-color-resize: #647993;
+
+@detail-comment-content-edge: .4rem;
+@detail-comment-content-space-resize: 0 .1rem;
+@detail-comment-content-text: .14rem/.24rem 'microsoft yahei';
+
+@detail-comment-time-text: .12rem;
+@detail-comment-time-color: #b7b7b7;
+
+
+@detail-page-width: 2.09rem;
+@detail-page-edge: .05rem;
+@detail-page-link-border-color: #b1b1b1;
+@detail-page-link-border-color-hover: #4e5e6a;
+@detail-page-count-width: 1.1rem;
+@detail-page-count-text: bold .2rem/.34rem 'microsoft yahei';
+@detail-page-count-color: #4e5e6a;
+
+
+/* 函数 */
+
+/* 样式 */
+
+.article-detail{
+  position: relative;
+  padding: @detail-space;
+  background: @detail-bg;
+
+  -webkit-animation: bounceInUp .6s both;
+  -o-animation: bounceInUp .6s both;
+  animation: bounceInUp .6s both;
+
+  .detail-user{
+    position: absolute;
+    left: @detail-user-position;
+    width: @detail-user-width;
+    height: @detail-user-height;
+    padding: @detail-user-space;
+    background: @detail-user-bg;
+    color: @detail-user-text-color;
+    overflow: hidden;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    .user-img{
+      float: left;
+      width: @detail-user-width - @detail-user-space * 2;
+      height: @detail-user-height - @detail-user-space * 2;
+      background: @detail-user-img-bg;
+    }
+
+    .user-name{
+      float: right;
+      height: @detail-user-height - @detail-user-space * 2;
+      margin-left: @detail-user-space;
+      overflow: hidden;
+      line-height: @detail-user-height - @detail-user-space * 2;
+      text-align: right;
+      white-space:nowrap;
+      text-overflow: ellipsis;
+    }
+    &:hover{
+      width: @detail-user-width-hover;
+    }
+  }
+  .detail-title{
+    margin: (@detail-user-width + @detail-user-space * 2) 0 @detail-title-edge 0;
+    font: @detail-title-text;
+    color: @detail-title-color;
+  }
+  .detail-desc{
+    margin-bottom: @detail-desc-edge;
+    padding: @detail-desc-space;
+    background: @detail-desc-bg;
+    font: @detail-desc-text;
+    color: @detail-desc-color;
+  }
+  .detail-content{
+    overflow: hidden;
+  }
+  .detail-nav{
+    margin: @detail-nav-edge;
+
+    a{
+      display: block;
+      position: relative;
+      width: @detail-nav-width;
+      height: @detail-nav-height;
+      padding: @detail-nav-space;
+      background: @detail-nav-bg;
+      font: @detail-nav-text;
+      color: @detail-nav-color;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+
+      &.nav-prev{
+        float: left;
+        left: @detail-nav-position;
+        text-align: left;
+      }
+
+      &.nav-next{
+        float: right;
+        right: @detail-nav-position;
+        text-align: right;
+      }
+
+      &:hover{
+        padding: @detail-nav-space-hover;
+        background: @detail-nav-bg-hover;
+      }
+    }
+  }
+}
+
+.article-form{
+  margin: @detail-form-edge auto;
+  padding: @detail-form-space;
+  background: @detail-form-bg;
+
+  .comment-title{
+    margin: 0 0 @detail-form-title-edge 0;
+    padding: @detail-form-title-space;
+    border-bottom: @detail-form-title-line;
+    font: @detail-form-title-text;
+    color: @detail-form-title-color;
+  }
+
+  .comment-form .form-item{
+    position: relative;
+    margin-bottom: @detail-form-item-edge;
+
+    &.success input, &.success textarea{
+      border-color: @detail-form-success-color;
+      background: @detail-form-success-bg;
+    }
+
+    &.error input, &.error textarea{
+      border-color: @detail-form-error-color;
+      background: @detail-form-error-bg;
+    }
+
+    button{
+      float: right;
+    }
+
+    &>p{
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      padding: @detail-form-notice-space;
+      font: @detail-form-notice-text;
+      &.success{
+        display: block;
+        color: @detail-form-success-color;
+      }
+      &.error{
+        display: block;
+        color: @detail-form-error-color;
+      }
+    }
+  }
+}
+
+.form-control{
+  border-color: @detail-form-input-border;
+  border-radius: 0;
+  font: @detail-form-input-text;
+  resize: none;
+  box-shadow: none!important;
+}
+
+.btn-submit{
+  position: relative;
+  width: @detail-form-btn-width;
+  height: @detail-form-btn-height;
+  padding: @detail-form-btn-space;
+  border: none;
+  background: @detail-form-btn-bg;
+  color: @detail-form-btn-color;
+  overflow: hidden;
+  &:hover{
+    background: @detail-form-btn-bg-hover;
+  }
+  span{
+    display: block;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    &.success{
+      -webkit-transform: translateY(150%);
+      -moz-transform: translateY(150%);
+      -ms-transform: translateY(150%);
+      -o-transform: translateY(150%);
+      transform: translateY(150%);
+    }
+  }
+  &.active{
+     span{
+        &.normal{
+          -webkit-transform: translateY(-150%);
+          -moz-transform: translateY(-150%);
+          -ms-transform: translateY(-150%);
+          -o-transform: translateY(-150%);
+          transform: translateY(-150%);
+        }
+        &.success{
+          -webkit-transform: translateY(-130%);
+          -moz-transform: translateY(-130%);
+          -ms-transform: translateY(-130%);
+          -o-transform: translateY(-130%);
+          transform: translateY(-130%);
+        }
+     }
+  }
+
+}
+
+.article-comment{
+  margin-top: @detail-comment-edge;
+  padding: @detail-comment-space;
+  background: @detail-comment-bg;
+
+  -webkit-animation: fadeInDownBig .6s both;
+  -o-animation: fadeInDownBig .6s both;
+  animation: fadeInDownBig .6s both;
+
+  .comment-list li{
+    position: relative;
+    padding: @detail-comment-item-space;
+    margin: @detail-comment-item-edge;
+    border-bottom: @detail-comment-item-line;
+  }
+
+  .comment-user{
+    position: absolute;
+    left: @detail-comment-user-position;
+    width: @detail-comment-user-width;
+    height: @detail-comment-user-height;
+    padding: @detail-comment-user-space;
+    background: @detail-comment-user-bg;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+
+    -webkit-animation: fadeInLeft .6s both;
+    -o-animation: fadeInLeft .6s both;
+    animation: fadeInLeft .6s both;
+
+    .user-img{
+      float: left;
+    }
+    .user-name{
+      float: right;
+      margin-left: @detail-comment-user-space;
+      line-height: @detail-comment-user-height - @detail-comment-user-space * 2;
+      text-align: right;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: @detail-comment-user-text-color;
+      overflow: hidden;
+    }
+    &:hover{
+      width: @detail-comment-user-width-hover;
+    }
+  }
+
+  .comment-content{
+    margin-left: @detail-comment-content-edge;
+    font: @detail-comment-content-text;
+    -webkit-animation: fadeInRight .5s both;
+    -o-animation: fadeInRight .5s both;
+    animation: fadeInRight .5s both;
+
+  }
+
+  .comment-time{
+    font-size: @detail-comment-time-text;
+    color: @detail-comment-time-color;
+    text-align: right;
+  }
+}
+
+.pagination{
+  display: block;
+  width: @detail-page-width;
+  margin: 0 auto;
+  &>li{
+    float: left;
+    display: block;
+    margin: @detail-page-edge;
+
+    &:first-child>a, &:first-child>span,
+    &:last-child>a, &:last-child>span{
+      border-radius: 0;
+    }
+
+    a{
+      border-color: @detail-page-link-border-color;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+
+      &:hover{
+        border-color: @detail-page-link-border-color-hover;
+      }
+    }
+
+    &.current{
+      width: @detail-page-count-width;
+      text-align: center;
+      font: @detail-page-count-text;
+      color: @detail-page-count-color;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .article-detail .detail-user {
+    left: @detail-user-position-resize;
+    width: @detail-user-width-hover;
+  }
+
+  .article-comment .comment-user {
+    position: static;
+    width: auto;
+    background: none;
+
+    .user-name {
+      float: left;
+      text-align: left;
+      color: @detail-comment-user-text-color-resize;
+    }
+  }
+
+  .article-comment .comment-content {
+    padding: @detail-comment-content-space-resize;
+    margin-left: 0;
+  }
+}
